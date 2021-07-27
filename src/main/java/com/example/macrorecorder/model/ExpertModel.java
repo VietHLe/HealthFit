@@ -9,11 +9,11 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class macros {
+public class ExpertModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //generated value to ID
-    private Long id;
+    private Long expert_id;
+    private String expert_advice;
+    private String expert_fName;
+    private String expert_lName;
 }
-
-
-
