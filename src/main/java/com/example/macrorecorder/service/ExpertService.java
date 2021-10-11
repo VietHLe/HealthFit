@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service;
 @Service
 public class ExpertService {
     @Autowired
-    ExpertRepo expertRepo;
+    private ExpertRepo expertRepo;
 }
