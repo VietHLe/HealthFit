@@ -2,6 +2,7 @@ package com.example.macrorecorder.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -12,4 +13,7 @@ public class AdminModel {
     private String admin_fName;
     private String admin_lName;
     private String password;
+
+    @OneToMany(mappedBy = "admin")
+    private List<ExpertModel> expert;
 }

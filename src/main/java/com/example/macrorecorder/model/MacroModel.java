@@ -13,6 +13,7 @@ public class MacroModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //generated value to ID
     private Long id;
+    private String advice;
 
     private int calories;
 
@@ -29,6 +30,9 @@ public class MacroModel {
     private int carbs = 0;
     private int protein = 0;
     private int fat = 0;
+
+    @ManyToOne
+    private ExpertModel expert;
 
 
 }

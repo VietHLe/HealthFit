@@ -2,10 +2,8 @@ package com.example.macrorecorder.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -16,4 +14,10 @@ public class ExpertModel {
     private String expert_advice;
     private String expert_fName;
     private String expert_lName;
+
+    @ManyToOne
+    private AdminModel admin;
+
+    @OneToMany(mappedBy = "expert")
+    private List<MacroModel> users;
 }
