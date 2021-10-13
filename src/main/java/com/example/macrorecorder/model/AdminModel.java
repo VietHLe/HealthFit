@@ -14,6 +14,4 @@ public class AdminModel {
     private String admin_lName;
     private String password;
 
-    @OneToMany(mappedBy = "admin")
-    private List<ExpertModel> expert;
 }

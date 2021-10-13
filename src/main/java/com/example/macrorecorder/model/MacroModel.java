@@ -31,8 +31,6 @@ public class MacroModel {
     private int protein = 0;
     private int fat = 0;
 
-    @ManyToOne
-    private ExpertModel expert;
 
 
 }

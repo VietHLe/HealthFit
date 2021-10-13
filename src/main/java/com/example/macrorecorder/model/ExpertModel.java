@@ -14,9 +14,5 @@ public class ExpertModel {
     private String expert_fName;
     private String expert_lName;
 
-    @ManyToOne
-    private AdminModel admin;
 
-    @OneToMany(mappedBy = "expert")
-    private List<MacroModel> users;
 }
