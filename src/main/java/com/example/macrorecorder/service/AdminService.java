@@ -1,6 +1,7 @@
 package com.example.macrorecorder.service;
 
 import com.example.macrorecorder.model.AdminModel;
+import com.example.macrorecorder.model.ExpertModel;
 import com.example.macrorecorder.repository.AdminRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,10 @@ public class AdminService {
 
         return adminRepo.save(adminModel);
     }
+    public void delete(Long id){
+        adminRepo.deleteById(id);
+    }
+
 
 
 }

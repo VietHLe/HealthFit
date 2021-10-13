@@ -78,4 +78,11 @@ public class macrosService {
         macroRepository.deleteById(id);
     }
 
+    public MacroModel advice(Long id, MacroModel advice){
+        MacroModel oldAdvice = macroRepository.findById(id).orElse(null);
+        String newUpdateAdvice = advice.getAdvice();
+        oldAdvice.setAdvice(newUpdateAdvice);
+        return macroRepository.save(oldAdvice);
+    }
+
 }
