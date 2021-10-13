@@ -5,7 +5,6 @@ import com.example.macrorecorder.repository.MacroRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.crypto.Mac;
 import java.util.List;
 
 @Service

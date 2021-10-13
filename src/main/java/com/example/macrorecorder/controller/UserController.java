@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/user")
-public class MacroController {
+public class UserController {
     @Autowired
     private macrosService macroRepository;
 
