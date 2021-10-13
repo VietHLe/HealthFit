@@ -1,6 +1,5 @@
 package com.example.macrorecorder.service;
 
-import com.example.macrorecorder.model.ExpertModel;
 import com.example.macrorecorder.model.UserModel;
 import com.example.macrorecorder.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
