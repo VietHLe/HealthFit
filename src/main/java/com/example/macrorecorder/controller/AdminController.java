@@ -2,8 +2,10 @@ package com.example.macrorecorder.controller;
 
 import com.example.macrorecorder.model.AdminModel;
 import com.example.macrorecorder.model.ExpertModel;
+import com.example.macrorecorder.model.UserModel;
 import com.example.macrorecorder.service.AdminService;
 import com.example.macrorecorder.service.ExpertService;
+import com.example.macrorecorder.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +18,8 @@ public class AdminController {
     private AdminService adminRepo;
     @Autowired
     private ExpertService expertRepo;
+    @Autowired
+    private UserService userRepo;
 
     @GetMapping("admin")
     public List<AdminModel> adminGetAll() {
@@ -33,4 +37,6 @@ public class AdminController {
     public ExpertModel create(@RequestBody ExpertModel expert){
         return expertRepo.expertCreate(expert);
     }
+    @PostMapping("admin/createUser")
+    public UserModel create(@RequestBody UserModel user){ return userRepo.userCreate(user);}
 }

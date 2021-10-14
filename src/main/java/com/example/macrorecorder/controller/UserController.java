@@ -2,6 +2,7 @@ package com.example.macrorecorder.controller;
 
 
 import com.example.macrorecorder.model.MacroModel;
+import com.example.macrorecorder.model.UserModel;
 import com.example.macrorecorder.service.macrosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
