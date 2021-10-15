@@ -2,10 +2,7 @@ package com.example.macrorecorder.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -15,4 +12,8 @@ public class UserModel {
     private Long user_id;
     private String user_fName;
     private String user_lName;
+
+    @OneToOne
+    @JoinColumn
+    private MacroModel macro;
 }

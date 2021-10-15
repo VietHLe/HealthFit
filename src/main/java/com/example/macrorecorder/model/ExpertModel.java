@@ -14,5 +14,8 @@ public class ExpertModel {
     private String expert_fName;
     private String expert_lName;
 
+    @OneToOne
+    @JoinColumn
+    private MacroModel macro;
 
 }

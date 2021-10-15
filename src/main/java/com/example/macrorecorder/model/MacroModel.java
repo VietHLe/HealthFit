@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -30,7 +31,6 @@ public class MacroModel {
     private int carbs = 0;
     private int protein = 0;
     private int fat = 0;
-
 
 
 }
