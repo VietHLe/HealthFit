@@ -1,6 +1,7 @@
 package com.example.macrorecorder.service;
 
 import com.example.macrorecorder.model.MacroModel;
+import com.example.macrorecorder.model.UserModel;
 import com.example.macrorecorder.repository.MacroRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +45,7 @@ public class macrosService {
         foodFat.setFat(total);
         return macroRepository.save(foodFat);
     }
+
     public MacroModel updateProtein(Long id, MacroModel protein){
         MacroModel foodProtein = macroRepository.findById(id).orElse(null);
         int oldProtein = foodProtein.getProtein();

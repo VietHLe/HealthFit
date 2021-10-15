@@ -3,6 +3,7 @@ package com.example.macrorecorder.controller;
 
 import com.example.macrorecorder.model.MacroModel;
 import com.example.macrorecorder.model.UserModel;
+import com.example.macrorecorder.service.UserService;
 import com.example.macrorecorder.service.macrosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,8 @@ import java.util.List;
 public class UserController {
     @Autowired
     private macrosService macroRepository;
+    @Autowired
+    private UserService userRepo;
 
     @GetMapping("macros")
     public List<MacroModel> getAllMacros() {
@@ -55,5 +58,13 @@ public class UserController {
     @PutMapping("macros/{id}/finish/dueDate")
     public MacroModel due(@PathVariable Long id,@RequestBody MacroModel dueDate){
         return  macroRepository.due(id,dueDate);
+    }
+//    @PutMapping("/{role}/{id}")
+//    public UserModel role(@PathVariable Long id,@PathVariable String admin ,@RequestBody UserModel role){
+//        return userRepo.updateRole(id,role);
+//    }
+    @PostMapping("createUser")
+    public UserModel userCreate(@RequestBody UserModel userModel){
+        return userRepo.userCreate(userModel);
     }
 }
