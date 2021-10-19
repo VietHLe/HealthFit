@@ -15,6 +15,8 @@ public class UserModel {
     private Long userId;
     private String userFName;
     private String userLName;
+    private String accName;
+    private String email;
     private String password;
 //    @Column(name = "USER_ROLES")
 //    private String roles;
@@ -23,4 +25,15 @@ public class UserModel {
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "USER_ROLES", joinColumns = @JoinColumn(name = "USER_ID"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Roles> setRoles;
+
+    public UserModel(String accName, String email, String password) {
+        this.accName = accName;
+        this.email = email;
+        this.password = password;
+
+    }
+
+    public UserModel() {
+
+    }
 }

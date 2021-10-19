@@ -59,10 +59,10 @@ public class UserController {
     public MacroModel due(@PathVariable Long id,@RequestBody MacroModel dueDate){
         return  macroRepository.due(id,dueDate);
     }
-//    @PutMapping("/{role}/{id}")
-//    public UserModel role(@PathVariable Long id,@PathVariable String admin ,@RequestBody UserModel role){
-//        return userRepo.updateRole(id,role);
-//    }
+    @PutMapping("/{role}/{id}")
+    public UserModel role(@PathVariable Long id,@PathVariable String admin ,@RequestBody UserModel role){
+        return userRepo.updateRole(id,role);
+    }
     @PostMapping("createUser")
     public UserModel userCreate(@RequestBody UserModel userModel){
         return userRepo.userCreate(userModel);
