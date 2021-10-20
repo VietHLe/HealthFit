@@ -1,7 +1,6 @@
 package com.example.macrorecorder.service;
 
 import com.example.macrorecorder.model.MacroModel;
-import com.example.macrorecorder.model.UserModel;
 import com.example.macrorecorder.repository.MacroRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

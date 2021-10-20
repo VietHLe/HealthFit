@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@RequestMapping("/auth")
+@RequestMapping("/healthfit/auth")
 public class SignUpController {
     @Autowired
     AuthenticationManager authenticationManager;
@@ -62,7 +62,7 @@ public class SignUpController {
 
     @PostMapping("/signUp")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignUp signUpRequest) {
-        if (userRepo.existsByUsername(signUpRequest.getUsername())) {
+        if (userRepo.existsByAccName(signUpRequest.getUsername())) {
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Username is already taken!"));
