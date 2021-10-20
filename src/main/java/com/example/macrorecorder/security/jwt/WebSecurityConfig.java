@@ -54,8 +54,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.cors().and().csrf().disable().exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests()
-				.antMatchers("/auth/**").permitAll().anyRequest()
+				.antMatchers("/healthfit/auth/**").permitAll().antMatchers("/h2-console/**").permitAll().antMatchers("/h2/**").permitAll().antMatchers("/user/**").permitAll().anyRequest()
 				.authenticated();
+		http.headers().frameOptions().disable();
 
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 	}

@@ -8,6 +8,7 @@ import com.example.macrorecorder.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 
@@ -16,6 +17,7 @@ public class UserService {
     @Autowired
     private UserRepo userRepo;
 
+    public List<UserModel> getUser(){ return userRepo.findAll();}
     public UserModel userCreate(UserModel userModel){
 
         return userRepo.save(userModel);
