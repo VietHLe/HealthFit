@@ -1,2 +1,15 @@
-<h1>Hello</h1>
-<app-sign-up></app-sign-up>
+<style>
+  div.a{
+    text-align: center;
+  }
+</style>
+<div class="a">
+<a routerLink="/sign-in"><button (click)="onClick(1)">Sign In</button></a>
+</div>
+<div class="a">
+<a routerLink="/sign-up"><button>Sign Up</button></a>
+</div>
+<div class="a">
+  <a routerLink="/macroMod"><button>Macro Table</button></a>
+</div>
+<router-outlet></router-outlet>

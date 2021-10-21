@@ -9,6 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ExpertComponent } from './expert/expert.component';
 import { UserComponent } from './user/user.component';
 import {FormsModule} from "@angular/forms";
+import { MacroModelComponent } from './macro-model/macro-model.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FormsModule} from "@angular/forms";
     SignInComponent,
     AdminComponent,
     ExpertComponent,
-    UserComponent
+    UserComponent,
+    MacroModelComponent
   ],
   imports: [
     BrowserModule,

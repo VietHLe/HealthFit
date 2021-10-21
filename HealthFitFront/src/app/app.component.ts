@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'HealthFitFront';
+
+  onClick(n:number){
+    console.log(n);
+  }
 }
