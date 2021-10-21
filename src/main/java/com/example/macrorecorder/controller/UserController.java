@@ -24,11 +24,7 @@ public class UserController {
         return macroRepository.getAll();
     }
 
-    @GetMapping("/admin")
-    public List<UserModel> adminGet() {
-        return userRepo.getUser();
-    }
-    @PostMapping("macros")
+    @PostMapping("/{accName}/macros")
     public MacroModel create(@RequestBody MacroModel macro){
         return macroRepository.create(macro);
     }

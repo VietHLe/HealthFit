@@ -17,6 +17,7 @@ public class UserModel {
     private String accName;
     private String email;
     private String password;
+    private String advice;
 //    @Column(name = "USER_ROLES")
 //    private String roles;
 

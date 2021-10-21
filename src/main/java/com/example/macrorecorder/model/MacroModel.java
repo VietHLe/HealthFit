@@ -2,6 +2,7 @@ package com.example.macrorecorder.model;
 
 import lombok.Data;
 
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -32,5 +33,11 @@ public class MacroModel {
     private int protein = 0;
     private int fat = 0;
 
+    @OneToOne
+    @JoinColumn(name = "USER_ID", referencedColumnName= "USER_ID")
+    private UserModel userModel;
 
+    public MacroModel() {
+
+    }
 }
