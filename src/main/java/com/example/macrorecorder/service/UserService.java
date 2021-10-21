@@ -23,7 +23,7 @@ public class UserService {
 
     public List<UserModel> getUser(){ return userRepo.findAll();}
 
-    public Optional<Roles> getUserByRole(ERoles role){ return roleRepo.findByRoles(role);}
+//    public Optional<Roles> getUserByRole(ERoles role){ return roleRepo.findByRoles(role);}
 
     public UserModel userCreate(UserModel userModel){
 
