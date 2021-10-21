@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" style="background-color:lavender;">
+      <label class="form-label">Calories Goal</label>
+      <input type="number" id="CaloriesGoal" class="form-control form-control-lg" placeholder="Calories Goal"
+             ngModel name="Calories Goal" /></div>
+    <div class="col" style="background-color: lavenderblush;">
+      <label class="form-label">Date</label>
+      <input type="date" id="Date" class="form-control form-control-lg" placeholder="Date"
+             ngModel name="Date" />
+    </div>
+    <div class="col" style="background-color:lavender;">
+      <label class="form-label">Advice</label>
+      <input type="text" id="Advice" class="form-control form-control-lg" placeholder="Advice"
+             ngModel name="Advice" />
+    </div>
+    <div class="col" style="background-color: lavenderblush;">
+      <label class="form-label">Due Date</label>
+      <input type="datetime-local" id="Due" class="form-control form-control-lg" placeholder="Due"
+             ngModel name="Due" />
+    </div>
+    <div class="col" style="background-color:lavender;">
+      <label class="form-label">Done</label>
+      <input type="checkbox" id="Done" class="form-control form-control-lg" placeholder="Done"
+             ngModel name="Done" />
+    </div>
+  </div>
+  <div class="col" style="background-color:lavenderblush;">
+    <label class="form-label">Food Eaten</label>
+    <input type="text" id="Eat" class="form-control form-control-lg" placeholder="Eat"
+           ngModel name="Eat" />
+  </div>
+  <div class="col" style="background-color:lavender;">
+    <label class="form-label">Calories of Food</label>
+    <input type="number" id="Calorie" class="form-control form-control-lg" placeholder="Calorie"
+           ngModel name="Calorie" />
+  </div>
+  <div class="col" style="background-color:lavenderblush;">
+    <label class="form-label">Carbs</label>
+    <input type="number" id="Carbs" class="form-control form-control-lg" placeholder="Carbs"
+           ngModel name="Carbs" />
+  </div>
+  <div class="col" style="background-color:lavender;">
+    <label class="form-label">Protein</label>
+    <input type="number" id="Protein" class="form-control form-control-lg" placeholder="Protein"
+           ngModel name="Protein" />
+  </div>
+  <div class="col" style="background-color:lavenderblush;">
+    <label class="form-label">Fat</label>
+    <input type="number" id="Fat" class="form-control form-control-lg" placeholder="Fat"
+           ngModel name="Fat" />
+  </div>
+  <div>
+  <button class="btn btn-success btn-lg btn-block" type="submit"
+          [disabled]="!myForm.form.valid">Submit</button>
+  </div>
+
+</div>
+
+
+
+
