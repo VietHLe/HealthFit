@@ -11,5 +11,8 @@ export class SignInComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onSubmit(myForm:any): void {
+    console.log(JSON.stringify(myForm.value));
+  }
 
 }

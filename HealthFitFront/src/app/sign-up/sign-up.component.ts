@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AccountService} from "../classes/account-service";
 import {UserModel} from "../classes/user-model";
+import {AccountServiceService} from "../account-service.service";
+import {FormArray, FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-sign-up',
@@ -9,12 +10,13 @@ import {UserModel} from "../classes/user-model";
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private as: AccountService) {}
+  constructor(private as: AccountServiceService) {}
   hide = true;
 
   newAccount = new UserModel();
   myForm: any = {};
   name !: string;
+
 
   ngOnInit(): void {}
   onAddAccount(n: number) {
@@ -27,15 +29,11 @@ export class SignUpComponent implements OnInit {
     console.log(this.newAccount);
   }
   addAccount() {
-    this.as.signUp(this.newAccount).subscribe((res) => console.log(res));
+    this.as.signUp(this.newAccount).subscribe((res:any) => console.log(res));
   }
 
-  onSubmit(): void {
-    // this.submitted = true;
-    // console.log('Email: ' + this.signin);
-    // // console.log('Password: ' + this.signin.Password);
-    // this.signIn(this.signin);
-    alert(this.name);
+  onSubmit(myForm:any): void {
+    console.log(JSON.stringify(myForm.value));
   }
 
 }

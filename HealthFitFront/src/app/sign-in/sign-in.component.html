@@ -1,1 +1,27 @@
-<p>sign-in works!</p>
+<style>
+  div.a{
+    text-align: center;
+  }
+</style>
+<div class="a">
+  <h1 >Sign In</h1>
+</div>
+<form accept-charset=utf-8 (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+
+  <div class="a">
+    <label class="form-label">Account Name</label>
+    <input type="text" id="AccountName" class="form-control form-control-lg" placeholder="AccountName"
+           ngModel name="Account Name" />
+  </div>
+  <div class="a">
+    <label class="form-label">Password</label>
+    <input type="password" id="password" class="form-control form-control-lg" placeholder="password"
+           ngModel name="password" />
+  </div>
+
+  <div class="a">
+    <button class="btn btn-primary btn-lg btn-block" type="submit"
+            [disabled]="!myForm.form.valid">Sign In</button>
+  </div>
+</form>
+
